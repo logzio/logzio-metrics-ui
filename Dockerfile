@@ -2,7 +2,7 @@ FROM registry.internal.logz.io:5000/node:14.16.0-alpine3.13 as js-builder
 
 WORKDIR /usr/src/app/
 
-COPY logzio-metrics-ui/package.json yarn.lock ./
+COPY logzio-metrics-ui/package.json logzio-metrics-ui/yarn.lock ./
 COPY logzio-metrics-ui/packages packages
 
 RUN apk --no-cache add git
@@ -24,14 +24,14 @@ RUN apk add --no-cache gcc g++
 
 WORKDIR $GOPATH/src/github.com/grafana/grafana
 
-COPY logzio-metrics-ui/go.mod go.sum embed.go ./
+COPY logzio-metrics-ui/go.mod logzio-metrics-ui/go.sum logzio-metrics-ui/embed.go ./
 
 RUN go mod verify
 
 COPY logzio-metrics-ui/cue cue
 COPY logzio-metrics-ui/public/app/plugins public/app/plugins
 COPY logzio-metrics-ui/pkg pkg
-COPY logzio-metrics-ui/build.go package.json ./
+COPY logzio-metrics-ui/build.go logzio-metrics-ui/package.json ./
 
 RUN go run build.go build
 
