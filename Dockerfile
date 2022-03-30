@@ -88,9 +88,9 @@ RUN cp "$GF_PATHS_HOME/conf/custom.ini" "$GF_PATHS_CONFIG"
 # LOGZ.IO GRAFANA CHANGE :: Preinstall plugins
 COPY ./logzio-metrics-ui/data/plugins "$GF_PATHS_PLUGINS"
 # LOGZ.IO GRAFANA CHANGE :: Remove news panel
-RUN rm -rf ./logzio-metrics-ui/public/app/plugins/panel/news
+RUN rm -rf ./public/app/plugins/panel/news
 # LOGZ.IO GRAFANA CHANGE :: Remove pluginlist panel
-RUN rm -rf ./logzio-metrics-ui/public/app/plugins/panel/pluginlist
+RUN rm -rf ./public/app/plugins/panel/pluginlist
 
 EXPOSE 3000
 
