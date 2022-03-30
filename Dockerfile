@@ -83,7 +83,8 @@ COPY --from=js-builder /usr/src/app/public ./public
 COPY --from=js-builder /usr/src/app/tools ./tools
 
 # LOGZ.IO GRAFANA CHANGE :: Copy custom.ini
-RUN cp ./logzio-metrics-ui/custom.ini "$GF_PATHS_CONFIG"
+COPY custom.ini /conf/custom.ini
+RUN cp "$GF_PATHS_HOME/conf/custom.ini" "$GF_PATHS_CONFIG"
 # LOGZ.IO GRAFANA CHANGE :: Preinstall plugins
 COPY ./logzio-metrics-ui/data/plugins "$GF_PATHS_PLUGINS"
 # LOGZ.IO GRAFANA CHANGE :: Remove news panel
