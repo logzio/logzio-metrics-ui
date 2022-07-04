@@ -56,7 +56,7 @@ require (
 	github.com/grafana/loki v1.6.2-0.20210520072447-15d417efe103
 	github.com/grpc-ecosystem/go-grpc-middleware v1.3.0
 	github.com/hashicorp/go-hclog v0.16.0
-	github.com/hashicorp/go-plugin v1.4.0
+	github.com/hashicorp/go-plugin v1.4.4
 	github.com/hashicorp/go-version v1.3.0
 	github.com/inconshreveable/log15 v0.0.0-20180818164646-67afb5ed74ec
 	github.com/influxdata/influxdb-client-go/v2 v2.2.3
@@ -90,8 +90,8 @@ require (
 	github.com/ua-parser/uap-go v0.0.0-20190826212731-daf92ba38329
 	github.com/uber/jaeger-client-go v2.27.0+incompatible
 	github.com/unknwon/com v1.0.1
+	github.com/unrolled/secure v1.0.8
 	github.com/urfave/cli/v2 v2.3.0
-  github.com/unrolled/secure v1.0.8
 	github.com/weaveworks/common v0.0.0-20210419092856-009d1eebd624
 	github.com/xorcare/pointer v1.1.0
 	github.com/yudai/gojsondiff v1.0.0
